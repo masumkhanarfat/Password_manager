@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <style>
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+*{
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+   user-select: none;
+   font-family: 'Poppins', sans-sarif;
+}
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #101010;
+  height: 100vh;
+}
+.info{
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 5%;
+}
+.box{
+  filter: blur(10px);
+  pointer-events: none;
+}
+.info .input{
+  width: 300px;
+  height: 60px;
+  background: #313131;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 10px;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  margin-bottom: 5px;
+  overflow: hidden;
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.1),
+      -5px -5px 15px rgba(0,0,0,0.1);
+}
+.info .number{
+  width: 300px;
+  height: 55px;
+  background: #313131;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 10px;
+  padding: 0 20px;
+  border-radius: 20px;
+  margin-top: 20px;
+  overflow: hidden;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1),
+  -5px -5px 15px rgba(0, 0, 0, 0.1);
+}
+.info .number input{
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+}
+.info .input:nth-child(2){
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.info .mail input,
+.info .pwd input{
+  width: 90%;
+  height: 100%;
+  padding: 20px;
+  font-size: 0.8em;
+  color: #fff;
+  border: none;
+  outline: none;
+  background: transparent;
+  user-select: none;
+}
+.info .mail span{
+  padding-right: 20px;
+}
+.info .mail span i{
+  color: #fff;
+  font-size: 1.5em;
+}
+.info .buttons{
+  margin: 0 10px;
+  padding: 0 10px;
+  margin-top: 20px;
+  width: 300px;
+  height: 55px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.info .buttons .btn{
+  
+}
+.info .buttons .btn button{
+  padding: 12px 23px;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  color: #000;
+  background: #ADC6FF;
+}
+
+  </style>
+</head>
+
+<body>
+<div class="container">
+    <div class="info">
+      
+      <div class="input mail">
+        <input type="email" value="masumkhanarfat@gmail.com" disabled>
+        <span><i class="fa-solid fa-copy" style="color: #fff;"></i></span>
+      </div>
+      
+      
+      
+  
+      <div class="input pwd">
+        <input type="password" value="@rfatGang420" disabled>
+        <span>
+          <i class="fa-regular fa-eye" style="color: #fff;"></i>
+        </span>
+  
+        <span><i class="fa-solid fa-copy" style="color: #fff;"></i></span>
+      </div>
+      
+      <div class="number">
+        <input type="text" value="Add note" disabled>
+      </div>
+      
+      
+      <div class="buttons">
+        <div class="share">
+          <i class="fas fa-share"></i>
+        </div>
+        
+        <div class="btn">
+          <button>Edit</button>
+          <button>Delete</button>
+        </div>
+      </div>
+  
+  
+    </div>
+</div>
+</body>
+
+</html>

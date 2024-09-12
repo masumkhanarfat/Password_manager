@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Password Manager | Log in</title>
+  
+  <!-- HTML -->
+  
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    
+*{
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+   user-select: none;
+   transition: .5s;
+}
+body {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   min-height: 100vh;
+   background: #242424;
+}
+.logIn{
+   position: relative;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   padding: 20px;
+   width: 310px;
+   height: fit-content;
+   background: #191919;
+}
+.logIn span{
+   color: #fff;
+   font-size: 1.8em;
+   font-weight: 500;
+   margin: 10px 0;
+}
+.logIn .icon{
+   position: absolute;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   right: 0;
+   color: #fff;
+   width: 35px;
+   height: 35px;
+   margin: -4px 20px 0 20px;
+   cursor: pointer;
+}
+.logIn .icon i{
+   z-index: 9999;
+}
+.logIn .submitBtn {
+   display: flex;
+   justify-content: space-between;
+   width: 100%;
+}
+.logIn input{
+   width: 100%;
+   margin: 10px 0;
+   padding: 10px;
+   outline: none;
+   border: 1px solid rgba(255, 255, 255, 0.1);
+   color: #999;
+   cursor: pointer;
+   background: transparent;
+}
+.logIn .submitBtn input[type="submit"]{
+   width: 80px;
+   color: #242424;
+   font-weight: 600;
+   background: #fff;
+   cursor: none;
+}
+/* Pop up */
+.popUp{
+   position: absolute;
+   width: 300px;
+   height: 200px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   padding: 0px 20px;
+   background: #fff;
+   display: none;
+}
+.popUp span{
+   font-size: 1.5em;
+   font-weight: 600;
+   margin-bottom: 25px;
+}
+.popUp input{
+   width: 100%;
+   height: 40px;
+   padding: 0 10px;
+   margin-bottom: 20px;
+   outline: none;
+   border: 1px solid #000;
+}
+.popUp input[type="submit"]{
+   margin: 0;
+   color: #fff;
+   background: #000;
+}
+.popUp .resetNote{
+   margin-top: 10px;
+   font-size: 0.7em;
+   font-weight: 400;
+}
+.popUp .close{
+   position: absolute;
+   top: 5px; right: 5px;
+   border-radius: 50%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 35px;
+   height: 35px;
+   cursor: pointer;
+   background: #191919;
+}
+.popUp .close::before{
+   content: "";
+   width: 100%;
+   height: 2px;
+   border-radius: 5px;
+   background: #fff;
+   transform: translateX(8px) rotate(45deg);
+}
+.popUp .close::after{
+   content: "";
+   width: 100%;
+   height: 2px;
+   border-radius: 5px;
+   background: #fff;
+   transform: translateX(-9px) rotate(-45deg);
+}
+  </style>
+</head>
+
+<body>
+  <div class="wrapper">
+     <div class="logIn">
+        <span>Log in</span>
+        <input type="password" required="required" placeholder="Password" id="input">
+        <div class="icon">
+           <i id="toggle" class="fa-regular fa-eye"></i>
+        </div>
+        <div class="submitBtn">
+           <input type="submit" value="Reset" class="btn">
+           <input type="submit" value="Log in" required="required" onclick="location.href=`index.html`">
+        </div>
+     </div>
+  </div>
+  
+  <div class="popUp">
+     <span>Reset Password</span>
+     <input type="email" required placeholder="Email Address">
+     <input type="submit" value="Reset" required>
+     <p class="resetNote">Note: This email address sent reset password Link.</p>
+     <div class="close"></div>
+  </div>
+  
+  
+  
+  <script src="script.js"></script>
+</body>
+</html>
